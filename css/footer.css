@@ -1,0 +1,51 @@
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 9%;
+    flex-wrap: wrap;
+    background: var(--secondary-bg-color);
+}
+.footer .footer-text p{
+    font-size: 1.6rem;
+}
+.footer .footericon a{
+    position: relative;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    /* width: ; */
+    /* font-size: 1.6rem; */
+    padding: .8rem;
+    background: var(--main-color);
+    border: .2rem solid var(--main-color);
+    border-radius: .6rem;
+    overflow: hidden;
+    z-index: 1;
+}
+.footer .footericon a::before{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    content: '';
+    background: var(--bg-color);
+    /* background: red; */
+    transition: .5s;
+    z-index: -1;
+}
+.footer .footericon a:hover::before{
+    width: 100%;
+    /* color: aqua; */
+}
+
+.footer .footericon a i{
+    font-size: 2rem;
+    color: var(--bg-color);
+    transition: .5s;
+}
+.footer .footericon a:hover i{
+    /* font-size: 2rem; */
+    color: var(--main-color);
+}

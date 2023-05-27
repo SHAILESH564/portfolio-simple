@@ -1,0 +1,75 @@
+.contact{
+    min-height: auto;
+    padding-bottom: 6rem;
+}
+.contact h2{
+    display: inline-block;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+form{
+    /* display: flex;
+    align-items: center;
+    flex-direction: column; */
+    text-align: center;
+    margin: 0 auto;
+    /* min-width: 70rem;s */
+}
+
+form .form-group{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0 2.3rem;
+    /* min-width: 100%; */
+}
+form .form-group .input-field{
+    position: relative;
+    width: 49%;
+    margin: .8rem 0;
+}
+form .textarea-field{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    margin: .8rem 2.3rem 2.7rem;
+}
+form  .textarea-field textarea{
+    resize: none;
+}
+form .form-group .input-field input,
+form  .textarea-field textarea{
+    width: 100%;
+    height: 100%;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    color: var(--text-color);
+    background: transparent;
+    border-radius: .5rem;
+    border: .2rem solid var(--main-color);
+}
+
+form .form-group .input-field input::placeholder,
+form  .textarea-field textarea::placeholder{
+    color: var(--text-color);
+    opacity: .5;
+}
+.contact form .focus{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+
+    background: var(--secondary-bg-color);
+    border-radius: .5rem;
+    transition: .5s;
+    z-index: -1;
+}
+form .form-group .input-field input:focus~.focus,
+form .form-group .input-field input:valid~.focus,
+form .textarea-field textarea:focus~.focus{
+    width: 100%;
+}

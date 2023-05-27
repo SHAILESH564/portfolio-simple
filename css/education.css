@@ -1,0 +1,87 @@
+.education {
+    min-height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 5rem;
+    
+}
+.education .education-container{
+    /* flex-direction: column; */
+    display: flex;
+    gap: 5rem;
+    flex-wrap: wrap;
+}
+
+.education-content{
+    flex: 1 1 40rem;
+}
+.title{
+    position: relative;
+    font-size: 2rem;
+    margin:0 0 1.5rem 2rem;
+    font-weight: 600;
+    display: inline-block;
+}
+.education .education-box{
+    position: relative;
+    border-left: 0.2rem solid var(--main-color);
+}
+.education-box .edcation-subcontent{
+    position: relative;
+    padding-left: 2rem;
+}
+
+.edcation-subcontent .content {
+    /* display: flex; */
+    position: relative;
+    padding: 1.5rem;
+    border: 0.2rem solid var(--main-color);
+    border-radius: 6px;
+    margin-bottom: 2rem;
+    overflow: hidden;
+}
+.edcation-subcontent .content::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--main-color) ;
+    opacity: .2;
+    transition: .5s;
+    z-index: -1;
+}
+.edcation-subcontent .content:hover::before{
+    width: 100%;
+}
+.education-box .edcation-subcontent::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -10px;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background-color: var(--main-color);
+}
+
+
+
+.edcation-subcontent .content .year {
+    font-size: 1.5rem;
+    padding-bottom: 0.5rem;
+    color: var(--main-color);
+}
+.edcation-subcontent .content .year i{
+    padding-right: .5rem;
+}
+.edcation-subcontent .content h3{
+    font-size: 2rem;
+}
+.edcation-subcontent .content p{
+    font-size: 1.5rem;
+    padding-top: .5rem;
+}

@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap');
+
+@import url("header.css");
+@import url("hero.css");
+@import url("about.css");
+@import url("education.css");
+@import url("Myskills.css");
+@import url("contact.css");
+@import url("footer.css");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Playfair Display', sans-serif;
+    border: none;
+    outline: none;
+}
+
+:root {
+    --bg-color: #081b29;
+    --secondary-bg-color: #0f281f;
+    --text-color: #ededed;
+    --main-color: #00abf0;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+section{
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
+}
+.heading{
+    position: relative;
+    font-size: 5rem;
+    margin-bottom: 3rem;
+    /* margin-bottom: 3rem; */
+    text-align: center;
+}
+span {
+    color: var(--main-color);
+}
+
+@media (max-width: 1200px) {
+    html {
+        font-size: 55%;
+    }
+}
+@media (max-width: 1010px) {
+    .header{
+        padding: 2rem 4%;
+    }
+    section{
+        padding: 10rem 4% 2rem;
+    }
+    .hero{
+        padding: 0 4%;
+    }
+    .footer{
+        padding: 2rem 4%;
+    }
+}
+@media (max-width: 930px){
+    .hero-content p{
+        width: 73%;
+    }
+}
+@media (max-width: 685px) {
+    .hero .hero-content h1{
+        font-size: 5.2rem;
+    }
+    .header{
+        background: var(--bg-color);
+    }
+    #menu-icon{
+        display: block;
+    }
+    .header-nav {
+        position: absolute;
+        top: 100%;
+        left: -100%;
+        width: 100%;
+        padding: 10px 4%;
+        background: var(--main-color);
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+        z-index: 1;
+        transition: .25s ease;
+        transition-delay: .25s;
+    }
+    .header-nav a{
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+    .header-nav.active {
+        left: 0;
+        transition-delay: 0s;
+    }
+    .header-nav .active-nav{
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: var(--bg-color);
+        border-top: .2rem solid rgba(0, 0, 0, .2);
+        z-index: -1;
+        transition: .25s ease;
+        transition-delay: 0s;
+    }
+    .header-nav.active .active-nav{
+        left: 0;
+        transition-delay: .25s;
+    }
+
+
+    .hero__img-design{
+        pointer-events: none;
+        background: var(--bg-color);
+        opacity: .6;
+    }
+
+}
+@media (max-width: 540px){
+    html{
+        font-size: 50%;
+    }
+    .hero-content h1{
+        display: flex;
+        flex-direction: column;
+    }
+    .hero-social {
+        width: 160px;
+    }
+    .hero-social .social{
+        width: 40px;
+        height: 40px;
+    }
+}
+@media (max-width: 440px){
+    .hero .hero-content h1{
+        font-size: 4.8rem;
+    }
+    .education{
+        padding: 10rem 4% 5rem 5%;
+    }
+    .contact form .form-group .input-field{
+        width: 100%;
+    }
+    .footer {
+        flex-direction: column-reverse;
+    }
+    .footer p{
+        margin-top: 2rem;
+        text-align: center;
+    }
+}
+@media (max-width: 330px) {
+    .hero {
+        justify-content: center;
+    }
+    .hero-content {
+        display: flex;
+        flex-direction: column;
+        /* justify-content: center; */
+        align-items: center;
+        text-align: center;
+    }
+    .hero .hero-content h1{
+        font-size: 4.3rem;
+    }
+}
+
+/* reload aimation */
+.animate {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--bg-color);
+    z-index: 55;
+}
+.animate.home-img{
+    width: 50%;
+}
+.logo .animate,
+.header-nav .animate,
+#menu-icon .animate,
+.hero.show-animate ,.animate{
+    animation: showRight 1s ease calc(.3s * var(--i)) forwards;
+
+}
+
+.education .education-box .animate.scroll,
+.skills .skills-box .animate.scroll{
+    width: 105%;
+}
+
+.animate.scroll {
+    transition: 1s ease;
+    transition-delay: calc(.3s / var(--i));
+    animation: none;
+}
+.about.show-animate .animate.scroll,
+.education.show-animate .animate.scroll,
+.skills.show-animate .animate.scroll,
+.contact.show-animate .animate.scroll{
+    transition-delay: calc(.3s * var(--i));
+    width: 0;
+}
+
+@keyframes showRight{
+    100% {
+        width: 0;
+    }
+}
+
