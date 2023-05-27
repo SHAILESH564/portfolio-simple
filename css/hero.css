@@ -4,7 +4,7 @@
     /* flex-direction: column; */
     align-items: center;
     padding: 0 9%;
-    background: url("./images/cats1.png");
+    background: url("/images/cats1.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
